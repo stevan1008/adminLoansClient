@@ -17,8 +17,8 @@ El sistema permite que tanto clientes como administradores se registren y acceda
 - Los usuarios (tanto clientes como administradores) pueden iniciar sesión usando su ID y contraseña.
 - Dependiendo de si el usuario es cliente o administrador, el sistema los redirigirá a su respectiva interfaz para realizar las acciones disponibles.
 
-![Interfaz Login y Sign Up para clientes](../admin-loans-client/assets/loginclientes.png)
-![Interfaz Login y Sign Up para Admins](../admin-loans-client/assets/loginAdmins.png)
+![Interfaz Login y Sign Up para clientes](https://github.com/stevan1008/adminLoansClient/blob/master/assets/loginclientes.png)
+![Interfaz Login y Sign Up para Admins](https://github.com/stevan1008/adminLoansClient/blob/master/assets/loginAdmins.png)
 
 ---
 
@@ -31,7 +31,7 @@ Una vez que un cliente se ha logueado e iniciado sesión, tiene la opción de so
 
 **Condición Importante:** Si el cliente no tiene un puntaje de crédito (creditScore), la solicitud no podrá ser enviada y se mostrará un mensaje de error indicando que no puede acceder a un crédito hasta tener un creditScore asignado por un administrador.
 
-![Interfaz Prestamos para Clientes](../admin-loans-client/assets/prestamosclientes.png)
+![Interfaz Prestamos para Clientes](https://github.com/stevan1008/adminLoansClient/blob/master/assets/prestamosclientes.png)
 
 ---
 
@@ -45,7 +45,7 @@ El flujo para aumentar el creditScore es:
 2. Puede ver una lista de clientes y modificar el creditScore de los clientes que lo necesiten.
 3. Una vez que el cliente tiene un creditScore suficiente, podrá solicitar préstamos sin problemas.
 
-![Interfaz aumentar credito para un cliente desde el menú de Admin](../admin-loans-client/assets/aumentocredito.png)
+![Interfaz aumentar credito para un cliente desde el menú de Admin](https://github.com/stevan1008/adminLoansClient/blob/master/assets/aumentocredito.png)
 
 ---
 
@@ -56,7 +56,7 @@ Ahora que el cliente tiene un creditScore asignado, puede volver a realizar la s
 1. El cliente ingresa el monto del préstamo y selecciona el plazo, que por default es 12 pero él podrá cambiarlo a conveniencia.
 2. La solicitud es enviada exitosamente y el sistema genera un préstamo en estado pendiente que es el default en el backend.
 
-![Interfaz cuando se pidió el prestamo](../admin-loans-client/assets/prestamoenviado.png)
+![Interfaz cuando se pidió el prestamo](https://github.com/stevan1008/adminLoansClient/blob/master/assets/prestamoenviado.png)
 
 ---
 
@@ -82,4 +82,4 @@ Después de que un préstamo es aprobado, el cliente podrá iniciar el proceso d
 3. Cada vez que el cliente realiza un pago, el sistema actualiza el saldo restante.
 4. Una vez que el préstamo ha sido pagado en su totalidad, se le notificará al cliente que el préstamo ha sido completamente pagado.
 
-![Pago de prestamos desde la interfaz de un cliente](../admin-loans-client/assets/oagodeprestamo.png)
+![Pago de prestamos desde la interfaz de un cliente](https://github.com/stevan1008/adminLoansClient/blob/master/assets/oagodeprestamo.png)
