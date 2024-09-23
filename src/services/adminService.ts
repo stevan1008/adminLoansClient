@@ -15,7 +15,7 @@ export interface AdminResponse {
 export const registerAdmin = async (
   adminData: AdminRequest
 ): Promise<AdminResponse> => {
-  const response = await fetch(`${baseEndpointAdmins}/register`, {
+  const response = await fetch(`${baseEndpointAdmins}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

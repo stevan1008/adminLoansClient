@@ -1,0 +1,69 @@
+.admin-menu-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+.clients-section,
+.loans-section {
+  margin-top: 1.5rem;
+}
+
+.client-item,
+.loan-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.client-item p,
+.loan-item p {
+  margin: 0.5rem 0;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.loan-actions button {
+  margin-right: 0.5rem;
+}
+
+.message {
+  color: green;
+}
+
+.error {
+  color: red;
+}

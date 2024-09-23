@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import './LoginAdminForm.css';
 import { loginAdmin } from '../../services/adminService';
 
-const LoginAdminForm: React.FC = () => {
+interface LoginAdminFormProps {
+  onLoginSuccess: () => void;
+}
+
+const LoginAdminForm: React.FC<LoginAdminFormProps> = ({ onLoginSuccess }) => {
   const [id, setId] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [message, setMessage] = useState<string>('');
@@ -15,7 +19,12 @@ const LoginAdminForm: React.FC = () => {
 
     try {
       const response = await loginAdmin(id, password);
+
+      localStorage.setItem('adminId', response.id);
+
       setMessage(`Login successful: Welcome ${response.id}`);
+
+      onLoginSuccess();
     } catch (err: any) {
       setError(err.message || 'Login failed');
     }

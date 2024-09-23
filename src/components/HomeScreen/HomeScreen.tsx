@@ -5,19 +5,25 @@ import LoginClientForm from '../LoginForm/LoginForm';
 import LoanRequestForm from '../LoanRequestForm/LoanRequesForm';
 import RegisterAdminForm from '../RegisterAdmin/RegisterAdminForm';
 import LoginAdminForm from '../LoginAdminForm/LoginAdminForm';
+import AdminMenu from '../AdminMenu/AdminMenu';
 
 const HomeScreen: React.FC = () => {
   const [isClient, setIsClient] = useState<boolean>(true);
   const [isSignUp, setIsSignUp] = useState<boolean>(true);
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState<boolean>(false);
 
-  const handleLoginSuccess = () => {
+  const handleClientLoginSuccess = () => {
     setIsAuthenticated(true);
+  };
+
+  const handleAdminLoginSuccess = () => {
+    setIsAdminAuthenticated(true);
   };
 
   const toggleClientAdmin = (isClientMode: boolean) => {
     setIsClient(isClientMode);
-    setIsSignUp(true); // Por defecto, vuelve a Sign Up
+    setIsSignUp(true);
   };
 
   const toggleSignUpLogin = (isSignUpMode: boolean) => {
@@ -30,8 +36,9 @@ const HomeScreen: React.FC = () => {
     <div className="home-container">
       <h1>Loan Management System</h1>
 
-      {/* Si el cliente está autenticado, muestra el formulario de solicitud de préstamo */}
-      {isAuthenticated ? (
+      {isAdminAuthenticated ? (
+        <AdminMenu />
+      ) : isAuthenticated ? (
         <LoanRequestForm />
       ) : (
         <>
@@ -55,12 +62,12 @@ const HomeScreen: React.FC = () => {
               isSignUp ? (
                 <RegisterClientForm />
               ) : (
-                <LoginClientForm onLoginSuccess={handleLoginSuccess} />
+                <LoginClientForm onLoginSuccess={handleClientLoginSuccess} />
               )
             ) : isSignUp ? (
               <RegisterAdminForm />
             ) : (
-              <LoginAdminForm />
+              <LoginAdminForm onLoginSuccess={handleAdminLoginSuccess} />
             )}
           </div>
 
