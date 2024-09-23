@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: loan_management_frontend
+    networks:
+      - frontend_network
+
+networks:
+  frontend_network:
+    driver: bridge

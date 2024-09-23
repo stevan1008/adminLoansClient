@@ -83,3 +83,28 @@ Después de que un préstamo es aprobado, el cliente podrá iniciar el proceso d
 4. Una vez que el préstamo ha sido pagado en su totalidad, se le notificará al cliente que el préstamo ha sido completamente pagado.
 
 ![Pago de prestamos desde la interfaz de un cliente](https://github.com/stevan1008/adminLoansClient/blob/master/assets/oagodeprestamo.png)
+
+
+---
+
+## Docker
+
+1. **Construir la imagen de Docker:**
+   ```bash
+   docker build -t loan-management-system-frontend .
+   ```
+2. **Ejecutar la imagen de Docker:**
+   ```bash
+   docker run -p 3000:80 loan-management-system-frontend
+   ```
+
+## Usar Docker Compose
+
+1. **Levantar el contenedor con Docker Compose:**
+   ```bash
+   docker-compose up -d
+   ```
+2. **Detener el contenedor:**
+   ```bash
+   docker-compose stop
+   ```
