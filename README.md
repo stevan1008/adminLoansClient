@@ -69,7 +69,7 @@ Los administradores tienen acceso a un listado de préstamos pendientes que han 
 
 Una vez que un préstamo es aprobado o rechazado, el cliente es notificado y puede proceder con el siguiente paso si es aprobado.
 
-![Aprobación de prestamo de un cliente desde el menú de admin](../admin-loans-client/assets/aprobarprestamo.png)
+![Aprobación de prestamo de un cliente desde el menú de admin](https://github.com/stevan1008/adminLoansClient/blob/master/assets/aprobarprestamo.png)
 
 ---
 
